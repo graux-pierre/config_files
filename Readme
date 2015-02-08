@@ -1,0 +1,7 @@
+Repository containing several configuration files :
+
+.gdbinit -> gdb configuration file (reversing purpose)
+
+xmonad.hs -> xmonad configuration file
+
+.xmobarrc .xmobarrc_script .check_batery -> xmobar configuration files
