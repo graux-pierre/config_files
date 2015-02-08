@@ -1,0 +1,1 @@
+amixer | grep -E "..%|100%" -m 1 -o

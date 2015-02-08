@@ -1,0 +1,7 @@
+BATDIR=/sys/class/power_supply/BAT0
+
+REM_CAP=`cat ${BATDIR}/charge_now`
+FULL_CAP=`cat ${BATDIR}/charge_full`
+CHARGE=`echo $(( $REM_CAP * 100 / $FULL_CAP ))`
+
+echo "Batery: ${CHARGE}%"
