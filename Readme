@@ -1,5 +1,7 @@
 Repository containing several configuration files :
 
+.emacs -> emacs config file
+
 .Xresources -> add clipboard to xterm
 
 .gitconfig -> add shortcut to git
