@@ -1,5 +1,9 @@
 Repository containing several configuration files :
 
+.Xresources -> add clipboard to xterm
+
+.gitconfig -> add shortcut to git
+
 .gdbinit -> gdb configuration file (reversing purpose)
 
 xmonad.hs -> xmonad configuration file
