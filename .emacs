@@ -11,9 +11,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(show-paren-mode 1)
+
 (global-set-key [M-right] 'next-buffer)
 (global-set-key [M-left] 'previous-buffer)
-(put 'downcase-region 'disabled nil)
 
 (global-set-key (kbd "<f5>") 'recompile)
+
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
+(show-paren-mode 1)
+
+(setq inhibit-splash-screen t)

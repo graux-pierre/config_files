@@ -1,13 +1,6 @@
-Repository containing several configuration files :
+Repository containing several configuration files : emacs urvtx zsh oh-my-zsh xmonad gdb git.
 
-.emacs -> emacs config file
-
-.Xresources -> add clipboard to xterm
-
-.gitconfig -> add shortcut to git
-
-.gdbinit -> gdb configuration file (reversing purpose)
-
-xmonad.hs -> xmonad configuration file
-
-.xmobarrc .xmobarrc_script .check_batery -> xmobar configuration files
+To clone and cp all config files (warning : do not check if some config files are present) :
+```
+git clone https://github.com/graux-pierre/config_files && ./install_script
+```

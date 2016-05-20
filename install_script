@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cp .check_batery ~/.check_batery
+cp .gdbinit ~/.gdbinit
+cp .gitconfig ~/.gitconfig
+cp -r .oh-my-zsh ~/
+cp .Xdefaults ~/.Xdefaults
+cp .xmobarrc_script ~/.xmobarrc_script
+cp .Xresources ~/.Xresources
+cp .emacs ~/.emacs
+cp .xmobarrc ~/.xmobarrc
+cp xmonad.hs ~/xmonad.hs
+cp .zshrc ~/.zshrc
+cd ../
+
+if [ -d "config_files" ];then
+rm -r config_files
+fi

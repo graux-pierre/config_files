@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Config.Azerty
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
@@ -24,12 +25,16 @@ main = do
         , ((0, xK_Print), spawn "scrot")
 
 	-- xterm shortcut
-	, ((mod4Mask, xK_t), spawn "xterm")
-	, ((mod4Mask, xK_T), spawn "xterm")
+	, ((mod4Mask, xK_t), spawn "urxvt -e /usr/bin/zsh")
+	, ((mod4Mask, xK_T), spawn "urxvt -e /usr/bin/zsh")
 	
 	-- firefox shortcut
 	, ((mod4Mask, xK_f), spawn "firefox")
 	, ((mod4Mask, xK_F), spawn "firefox")
+
+	-- emacs shortcut
+	, ((mod4Mask, xK_d), spawn "emacs")
+	, ((mod4Mask, xK_D), spawn "emacs")
 
 	-- se left and right (+shift) to switch beetween WS
         , ((mod4Mask, xK_Right), nextWS)
