@@ -11,8 +11,9 @@ cp .emacs ~/.emacs
 cp .xmobarrc ~/.xmobarrc
 cp xmonad.hs ~/xmonad.hs
 cp .zshrc ~/.zshrc
-cd ../
+cp solarized-dark-theme.el ~/.emacs.d/themes/
 
+cd ../
 if [ -d "config_files" ];then
 rm -r config_files
 fi
