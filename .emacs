@@ -26,6 +26,9 @@
 (put 'upcase-region 'disabled nil)
 (setq inhibit-splash-screen t)
 
+;; désactivate bell
+(setq ring-bell-function 'ignore)
+
 ;; Mutt support.
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
 
