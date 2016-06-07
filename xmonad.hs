@@ -10,7 +10,7 @@ import System.IO
 main = do
     xmproc <- spawnPipe "xmobar /home/patlepanda/.xmobarrc"
 
-    xmonad $ defaultConfig
+    xmonad $ azertyConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
@@ -36,6 +36,16 @@ main = do
 	, ((mod4Mask, xK_d), spawn "emacs")
 	, ((mod4Mask, xK_D), spawn "emacs")
 
+	-- emacs shortcut
+	, ((mod4Mask, xK_i), spawn "urxvt -e ssh -t patlepanda@vps284684.ovh.net \"screen -x irc\"")
+	, ((mod4Mask, xK_I), spawn "urxvt -e ssh -t patlepanda@vps284684.ovh.net \"screen -x irc\"")
+
+	-- screen shortcut
+	, ((0, 0x1008ff2d), spawn "xscreensaver-command --lock")
+
+	-- screenshot to png in /tmp/
+	, ((mod4Mask , xK_Print ), spawn "scrot /tmp/screen_%Y-%m-%d-%H-%M-%S.png -d 1")
+
 	-- se left and right (+shift) to switch beetween WS
         , ((mod4Mask, xK_Right), nextWS)
 	, ((mod4Mask, xK_Left), prevWS)
@@ -49,7 +59,5 @@ main = do
    	, ((0            , 0x1008ff11), spawn "amixer -c 0 set Master 2dB-")
    	-- XF86AudioRaiseVolume
    	, ((0            , 0x1008ff13), spawn "amixer -c 0 set Master 2dB+")
-   	-- XF86AudioMute
-   	, ((0            , 0x1008ff12), spawn "amixer -D pulse set Master toggle")
-	]
+   	]
 
