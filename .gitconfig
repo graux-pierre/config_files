@@ -11,4 +11,4 @@
   type = cat-file -t
   dump = cat-file -p
 	dfw = diff --ignore-space-change
-
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
